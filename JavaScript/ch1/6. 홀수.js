@@ -3,8 +3,10 @@ function solution(arr) {
   let sum = 0;
   let min = Number.MAX_VALUE;
   arr.forEach((value) => {
+    //홀수 찾기
     if (value % 2 !== 0) {
       sum += value;
+      // 홀수 중 작은 값 찾기
       if (min > value) {
         min = value;
       }

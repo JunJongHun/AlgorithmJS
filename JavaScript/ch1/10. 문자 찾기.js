@@ -1,6 +1,10 @@
 function solution1(s, t) {
   let answer = 0;
-
+  for (const iterator of s) {
+    if (iterator === t) {
+      answer += 1;
+    }
+  }
   return answer;
 }
 
@@ -8,7 +12,7 @@ let str1 = "COMPUTERPROGRAMMING";
 console.log(solution1(str1, "R"));
 
 function solution2(s, t) {
-  let answer;
+  let answer = s.split(t).length;
   return answer - 1;
 }
 
