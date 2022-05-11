@@ -1,6 +1,10 @@
 function solution(test) {
   let answer = 0;
-
+  for (let i = 0; i < test.length; i++) {
+    for (let j = 0; j < test[i].length; j++) {
+      console.log(test[i][j]);
+    }
+  }
   return answer;
 }
 
