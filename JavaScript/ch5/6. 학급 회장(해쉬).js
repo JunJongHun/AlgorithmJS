@@ -6,7 +6,7 @@ function solution(s) {
     if (a.has(x)) {
       a.set(x, a.get(x) + 1);
     } else {
-      a.set(x, 0);
+      a.set(x, 1);
     }
   }
 

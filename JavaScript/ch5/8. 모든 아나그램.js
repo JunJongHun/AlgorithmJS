@@ -7,22 +7,24 @@ function solution(s, t) {
   let rp = 0;
   let a_sum = 0;
   let b_sum = 0;
+
   for (const [i, v] of t) {
     if (b.has(i)) {
       b.set(i, b.get(i) + 1);
     } else b.set(i, 1);
   }
-
+  console.log(b);
   for (const [i, v] of b) {
     b_sum += v;
   }
-  //   console.log(b_sum);
+  console.log(b_sum);
 
   for (let rp = 0; rp < s.length; rp++) {
     if (a.has(s[rp])) {
       a.set(s[rp], a.get(s[rp]) + 1);
     } else a.set(s[rp], 1);
-    // console.log(a);
+    console.log(a);
+
     if (a.size === b.size) {
       let ok = true;
       for (const [key, value] of b) {
