@@ -1,4 +1,26 @@
-function solution(board, moves) {}
+function solution(board, moves) {
+  let answer = 0;
+  let stack = [];
+
+  for (const move of moves) {
+    for (let i = 0; i < board.length; i++) {
+      if (board[i][move - 1] !== 0) {
+        if (stack[stack.length - 1] === board[i][move - 1]) {
+          stack.pop();
+          board[i][move - 1] = 0;
+          answer += 2;
+          break;
+        }
+        stack.push(board[i][move - 1]);
+        board[i][move - 1] = 0;
+        break;
+      }
+    }
+    console.log(stack);
+  }
+
+  return answer;
+}
 
 let a = [
   [0, 0, 0, 0, 0],
