@@ -7,6 +7,7 @@ function solution(arr) {
       if (arr[j] > arr[index]) {
         [arr[j], arr[index]] = [arr[index], arr[j]];
         index = j;
+        break;
       }
     }
     console.log(arr);
