@@ -17,8 +17,8 @@ function solution(m, coin) {
   return answer;
 }
 
-let arr = [1, 2, 5, 3, 8];
-console.log(solution(23, arr));
+let arr = [1, 2, 5, 10, 16]; //잘못 된 예시!
+console.log(solution(20, arr));
 
 function solution1(m, coin) {
   let answer = 0;
@@ -28,12 +28,14 @@ function solution1(m, coin) {
   for (const coco of coin) {
     for (let i = coco; i <= m; i++) {
       dp[i] = Math.min(dp[i], dp[i - coco] + 1);
+      // dp[i] = dp[i - coco] + 1;
     }
   }
+  console.log(dp);
 
   answer = dp[m];
   return answer;
 }
 
-let arr1 = [1, 2, 5, 3, 8];
-console.log(solution1(17, arr));
+let arr1 = [1, 2, 5];
+console.log(solution1(15, arr1));

@@ -1,7 +1,7 @@
 function solution(arr) {
   let answer;
 
-  let dp = Array.from({ length: 1000 }, (v, i) => {
+  let dp = Array.from({ length: 10 }, (v, i) => {
     return 0;
   });
 
@@ -13,6 +13,7 @@ function solution(arr) {
         dp[i] = Math.max(dp[j] + 1, dp[i]);
       }
     }
+    console.log(dp);
   }
 
   answer = Math.max(...dp);
