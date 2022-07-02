@@ -9,6 +9,7 @@ function solution(n, r) {
     else return (dy[n][r] = DFS(n - 1, r - 1) + DFS(n - 1, r));
   }
   answer = DFS(n, r);
+  console.log(dy);
   return answer;
 }
 
